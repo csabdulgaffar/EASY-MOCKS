@@ -7,7 +7,7 @@ app.use(cors())
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://root:root@cluster0.ncumw.mongodb.net/quizApp')
+mongoose.connect('mongodb+srv://____@cluster0.ncumw.mongodb.net/quizApp')
     .then(() => console.log('MongoDB Connected'))
     .catch(console.error);
 
