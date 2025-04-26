@@ -4,10 +4,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors')
 app.use(cors())
+require('dotenv').config();
+const MONGO_URL = process.env.MONGO_URL;
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://____@cluster0.ncumw.mongodb.net/quizApp')
+mongoose.connect(MONGO_URL)
     .then(() => console.log('MongoDB Connected'))
     .catch(console.error);
 
