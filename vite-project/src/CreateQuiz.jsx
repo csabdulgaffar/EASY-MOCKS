@@ -28,7 +28,7 @@ const CreateQuiz = () => {
 
     const submitQuiz = async () => {
         try {
-            const res = await axios.post('http://localhost:5000/quiz/create', {
+            const res = await axios.post('https://easy-mocks.onrender.com/quiz/create', {
                 name: quizName,
                 questions
             });

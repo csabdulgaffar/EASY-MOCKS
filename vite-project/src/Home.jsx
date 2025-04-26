@@ -14,7 +14,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/quizzes').then(res => setQuizzes(res.data));
+        axios.get('https://easy-mocks.onrender.com/quizzes').then(res => setQuizzes(res.data));
     }, []);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Home = () => {
 
     const startQuiz = async (id) => {
         setSelectedQuizId(id);
-        const res = await axios.get(`http://localhost:5000/quiz/${id}`);
+        const res = await axios.get(`https://easy-mocks.onrender.com/quiz/${id}`);
         setQuestions(res.data);
         setAnswers(Array(res.data.length).fill(null));
         setSubmitted(false);
@@ -50,15 +50,9 @@ const Home = () => {
         setTimeLeft(3600);
     };
 
-    // const submitQuiz = async () => {
-    //     const res = await axios.post(`http://localhost:5000/quiz/submit/${selectedQuizId}`, {
-    //         answers
-    //     });
-    //     setResult(res.data);
-    //     setSubmitted(true);
-    // };
+
     const submitQuiz = async () => {
-        const res = await axios.post(`http://localhost:5000/quiz/submit/${selectedQuizId}`, {
+        const res = await axios.post(`https://easy-mocks.onrender.com/quiz/submit/${selectedQuizId}`, {
             answers
         });
 
