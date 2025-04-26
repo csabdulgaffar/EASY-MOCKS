@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+PASSCODE = import.meta.env.VITE_PASSCODE
 
 const PasscodePage = ({ setAuthorized }) => {
     const [code, setCode] = useState('');
@@ -7,7 +8,7 @@ const PasscodePage = ({ setAuthorized }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (code === 'iwillcreateamock') {
+        if (code === 'PASSCODE') {
             setAuthorized(true);
             navigate('/create-quiz');
         } else {
