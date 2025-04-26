@@ -8,7 +8,7 @@ const PasscodePage = ({ setAuthorized }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (code === 'PASSCODE') {
+        if (code === PASSCODE) {
             setAuthorized(true);
             navigate('/create-quiz');
         } else {
