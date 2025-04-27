@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-const PASSCODE = process.env.PASSCODE;
+const PASSCODE = import.meta.env.VITE_PASSCODE;
+console.log(PASSCODE)
 
 const PasscodePage = ({ setAuthorized }) => {
     const [code, setCode] = useState('');
