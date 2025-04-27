@@ -43,7 +43,7 @@ function Layout() {
             </div>
 
             <div className="bg-gray-900 py-40 text-white text-center mt-20">
-                <div>Copyright @ csabdulgaffar@gmail.com</div>
+                <div>Copyright @2025 xyz@gmail.com</div>
             </div>
         </div>
     );
